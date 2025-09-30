@@ -1,0 +1,373 @@
+/* estilos.css: estilos responsivos para móviles, tablets y ordenadores */
+
+/* Estilos base (ordenadores) */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+body {
+    font-family: 'Montserrat', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #18181b;
+    color: #fff;
+}
+header, footer {
+    background: #18181b;
+    color: #fff;
+    padding: 0;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 120px;
+}
+main {
+    max-width: 900px;
+    margin: 2rem auto;
+    background: #18181b;
+    color: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+h1 {
+    font-size: 2.5rem;
+    margin: 0;
+}
+h2 {
+    font-size: 1.5rem;
+    margin-top: 0;
+}
+
+/* Estilos base (ordenadores) */
+.navbar__logo {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+.navbar__logo-img {
+    height: 120px;
+    width: auto;
+    max-width: 120px;
+    object-fit: contain;
+    display: block;
+}
+.navbar__logo h1 {
+    font-size: 1.7rem;
+    margin: 0;
+    color: #fff;
+}
+.navbar__menu {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+    margin: 0;
+    padding: 0;
+}
+.navbar__menu li {
+    position: relative;
+}
+.navbar__menu a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 0.5rem 0.8rem;
+    border-radius: 4px;
+    transition: background 0.2s;
+}
+.navbar__menu a:hover {
+    background: #0077cc;
+}
+.has-submenu:hover .submenu,
+.has-submenu:focus-within .submenu {
+    display: block;
+}
+.submenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #23232b;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    list-style: none;
+    margin: 0;
+    padding: 0.5rem 0;
+    min-width: 150px;
+    z-index: 10;
+}
+.submenu li a {
+    display: block;
+    padding: 0.5rem 1rem;
+    color: #fff;
+    border-radius: 0;
+}
+.submenu li a:hover {
+    background: #0077cc;
+}
+.navbar__toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 2rem;
+    cursor: pointer;
+}
+.navbar__toggle:focus {
+    outline: 2px solid #0077cc;
+}
+@media (max-width: 900px) {
+    .navbar__logo-img {
+        height: 70px;
+        max-width: 80px;
+    }
+    main {
+        max-width: 95%;
+        padding: 1.2rem;
+    }
+    h1 {
+        font-size: 2rem;
+    }
+    h2 {
+        font-size: 1.2rem;
+    }
+}
+
+/* Móviles */
+@media (max-width: 600px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 1rem;
+    }
+    .navbar__logo-img {
+        height: 60px;
+        max-width: 60px;
+    }
+    header, footer {
+        padding: 1rem;
+    }
+    main {
+        padding: 0.7rem;
+    }
+    h1 {
+        font-size: 1.3rem;
+    }
+    h2 {
+        font-size: 1rem;
+    }
+    p {
+        font-size: 0.95rem;
+    }
+    .navbar {
+        flex-direction: row;
+        padding: 0.5rem 0.7rem;
+        max-width: 900px;
+        margin: 0 auto;
+        width: 100%;
+    }
+    .navbar__logo h1 {
+        font-size: 1.1rem;
+    }
+    .navbar__toggle {
+        display: block;
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        z-index: 101;
+    }
+    .navbar__menu {
+        position: fixed;
+        top: 0;
+        right: 0;
+        height: 100%;
+        width: 70%;
+        background: #23232b;
+        transform: translateX(100%);
+        transition: transform 0.3s ease;
+        display: flex;
+        flex-direction: column;
+        padding-top: 3rem;
+        z-index: 100;
+    }
+    .navbar__menu.open {
+        transform: translateX(0);
+    }
+    .navbar__menu li {
+        width: 100%;
+    }
+    .navbar__menu a {
+        display: block;
+        width: 100%;
+        padding: 1rem 1.5rem;
+        font-size: 1.1rem;
+        padding: 1rem;
+        text-align: left;
+        color: #fff;
+        text-decoration: none;
+        border-bottom: 1px solid #444;
+    }
+    .submenu {
+        position: static;
+        box-shadow: none;
+        min-width: unset;
+        background: #18181b;
+        display: none !important;
+    }
+    .submenu.open {
+        display: block !important;
+    }
+    .submenu li a {
+        padding-left: 2.5rem;
+        font-size: 1rem;
+    }
+    .column button {
+        position: static;
+        top: unset;
+        left: unset;
+        transform: unset;
+        width: auto;
+    }
+}
+
+/* Estilos para las columnas */
+.columns {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    align-items: flex-start;
+    margin: 2rem 0;
+}
+
+.column {
+    flex: 1;
+    text-align: center;
+    background: #1f1f1f;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Sombra más marcada */
+    position: relative;
+}
+
+.column img {
+    max-width: 100%;
+    height: auto;
+    margin: 1rem 0;
+    transition: none;
+    object-fit: cover; /* Asegura que la imagen se mantenga dentro del contenedor */
+    display: block;
+    width: 100%;
+}
+
+.column img:hover {
+    transform: none;
+}
+
+.column button {
+    background: #0077cc;
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.column button:hover {
+    background: #005fa3;
+}
+
+/* Ajustar la etiqueta .image-label para que esté centrada en el borde inferior dentro del contenedor de la imagen */
+.image-label {
+    position: absolute;
+    bottom: 0; /* Justo en el borde inferior del contenedor */
+    left: 50%; /* Centrada horizontalmente */
+    transform: translateX(-50%); /* Ajustar para centrar completamente */
+    background-color: red; /* Fondo rojo */
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    z-index: 1; /* Asegura que esté por encima de la imagen */
+    white-space: nowrap; /* Evita que el texto se divida en varias líneas */
+}
+
+/* Asegurar que el contenedor de la imagen limite el contenido */
+.column div {
+    position: relative; /* Necesario para que .image-label se posicione dentro */
+    overflow: hidden; /* Evita que el contenido salga del contenedor */
+}
+
+@media (max-width: 900px) {
+    .columns {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+}
+
+/* Centrar los elementos de las listas a la izquierda */
+section ul {
+    text-align: left; /* Asegura que los elementos estén alineados a la izquierda */
+    margin: 0 auto; /* Centra el listado dentro del contenedor */
+    padding: 0; /* Elimina el padding por defecto */
+    list-style-position: inside; /* Asegura que los puntos estén dentro del contenedor */
+}
+
+/* Incrementar el espacio entre los elementos de las listas */
+section ul li {
+    margin-bottom: 10px; /* Agrega espacio adicional entre los elementos */
+}
+
+/* Estilo para el elemento separador */
+.separator {
+    border: none;
+    border-top: 2px solid white; /* Línea blanca */
+    margin: 20px 0; /* Espacio arriba y abajo */
+    width: 100%; /* Ocupa todo el ancho */
+}
+
+/* Estilo para el botón de "Apúntate" */
+.button-apuntate {
+    display: inline-block;
+    background-color: #ff5733; /* Color llamativo */
+    color: white; /* Texto en blanco */
+    padding: 15px 30px; /* Espaciado interno */
+    font-size: 18px; /* Tamaño de fuente grande */
+    font-weight: bold; /* Texto en negrita */
+    text-align: center; /* Centrado del texto */
+    text-decoration: none; /* Sin subrayado */
+    border-radius: 8px; /* Bordes redondeados */
+    margin: 20px auto; /* Margen para destacar */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Sombra para resaltar */
+    transition: transform 0.2s, box-shadow 0.2s; /* Transiciones suaves */
+}
+
+.button-apuntate:hover {
+    transform: scale(1.05); /* Efecto de agrandamiento al pasar el cursor */
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3); /* Sombra más intensa */
+}
+
+.button-apuntate:active {
+    transform: scale(0.95); /* Efecto al hacer clic */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Sombra más suave */
+}
+
+.remarque {
+    background-color: rgba(0, 0, 0, 0.3); /* Fondo negro con 50% de opacidad */
+    padding: 1.1rem; /* Espaciado interno */
+}
+
+.button-link {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background-color: #0077cc;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+    text-align: center;
+}
+
+.button-link:hover {
+    background-color: #005fa3;
+}
