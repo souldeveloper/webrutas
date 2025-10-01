@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Calendario</title>
+	<link rel="stylesheet" href="estilos.css">
+    <script src="script.js"></script>
+    <style>
+        .calendar {
+            margin: 20px auto;
+            max-width: 100%;
+            overflow-x: auto;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+            background-color: #ffffff; /* Fondo blanco para las tablas */
+        }
+        th, td {
+            border: 1px solid #ddd;
+            text-align: center;
+            padding: 8px;
+            color: #000000; /* Números en negro para mejor visibilidad */
+        }
+        th {
+            background-color: #f4f4f4;
+        }
+        .silencio {
+            background-color: #ffcccb;
+        }
+        .plata {
+            background-color: #ccffcc;
+        }
+        .marruecos {
+            background-color: #ccccff;
+        }
+        .flor {
+            background-color: #ffffcc;
+        }
+        .legend {
+            margin-top: 20px;
+        }
+        .legend h3 {
+            margin-bottom: 10px;
+        }
+        .legend ul {
+            list-style: none;
+            padding: 0;
+        }
+        .legend li {
+            display: flex;
+            align-items: center;
+            margin-bottom: 5px;
+        }
+        .legend-color {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            margin-right: 10px;
+            border: 1px solid #000;
+        }
+        .legend-color.silencio {
+            background-color: #ffcccb;
+        }
+        .legend-color.plata {
+            background-color: #ccffcc;
+        }
+        .legend-color.marruecos {
+            background-color: #ccccff;
+        }
+        .legend-color.flor {
+            background-color: #ffffcc;
+        }
+
+        @media (max-width: 768px) {
+            .calendar {
+                padding: 0 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+	<header>
+		<nav class="navbar">
+			<div class="navbar__logo">
+				<img src="imagenes/dondevamos.png" alt="Logo Donde Vamos" class="navbar__logo-img">
+				<h1>DESUBICA2 - VIAJA Y EXPLORA</h1>
+			</div>
+			<button class="navbar__toggle" id="menu-toggle" aria-label="Abrir menú">
+				<span class="navbar__toggle-icon">&#9776;</span>
+			</button>
+			<ul class="navbar__menu" id="navbar-menu">
+				<li><a href="index.html">INICIO</a></li>
+				<li class="has-submenu">
+					<a href="#">RUTAS</a>
+					<ul class="submenu">
+						<li><a href="marruecosinterior.html">MARRUECOS INTERIOR</a></li>
+						<li><a href="silencio.html">RUTA DEL SILENCIO</a></li>
+						<li><a href="flor_de_teruel.html">LA FLOR DE TERUEL</a></li>
+						<li><a href="ruta_portugal.html">RUTA DE LA PLATA + PORTUGAL</a></li>
+                        <li><a href="calendario.html">CALENDARIO</a></li>
+                    </ul>
+				</li>
+				<li><a href="#">CONTENIDO LEGAL</a></li>
+				<li><a href="#">FOTOS</a></li>
+				<li><a href="#">VIDEOS</a></li>
+                <li><a href="calendario.html">CALENDARIO</a></li>
+			</ul>
+		</nav>
+	</header>
+	<main>
+		<section style="text-align: left; padding: 20px;">
+			<h1>Calendario 2028</h1>
+		</section>
+		<section>
+            <h2>Calendario de Rutas</h2>
+            <div class="calendar">
+                <h3>Noviembre 2028</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Lunes</th>
+                            <th>Martes</th>
+                            <th>Miércoles</th>
+                            <th>Jueves</th>
+                            <th>Viernes</th>
+                            <th>Sábado</th>
+                            <th>Domingo</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td class="silencio">2</td>
+                            <td class="silencio">3</td>
+                            <td class="silencio">4</td>
+                            <td>5</td>
+                            <td class="plata">6</td>
+                        </tr>
+                        <tr>
+                            <td class="plata">9</td>
+                            <td class="plata">10</td>
+                            <td class="plata">11</td>
+                            <td class="plata">12</td>
+                            <td class="plata">13</td>
+                            <td class="plata">14</td>
+                            <td class="plata">15</td>
+                        </tr>
+                        <tr>
+                            <td class="plata">16</td>
+                            <td class="plata">17</td>
+                            <td class="plata">18</td>
+                            <td>19</td>
+                            <td class="marruecos">20</td>
+                            <td class="marruecos">21</td>
+                            <td class="marruecos">22</td>
+                        </tr>
+                        <tr>
+                            <td class="marruecos">23</td>
+                            <td class="marruecos">24</td>
+                            <td class="marruecos">25</td>
+                            <td class="marruecos">26</td>
+                            <td class="marruecos">27</td>
+                            <td class="marruecos">28</td>
+                            <td class="marruecos">29</td>
+                        </tr>
+                        <tr>
+                            <td class="marruecos">30</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>Marzo 2028</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Lunes</th>
+                            <th>Martes</th>
+                            <th>Miércoles</th>
+                            <th>Jueves</th>
+                            <th>Viernes</th>
+                            <th>Sábado</th>
+                            <th>Domingo</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td>1</td>
+                            <td class="flor">2</td>
+                        </tr>
+                        <tr>
+                            <td class="flor">3</td>
+                            <td class="flor">4</td>
+                            <td class="flor">5</td>
+                            <td class="flor">6</td>
+                            <td class="flor">7</td>
+                            <td>8</td>
+                            <td class="marruecos">9</td>
+                        </tr>
+                        <tr>
+                            <td class="marruecos">10</td>
+                            <td class="marruecos">11</td>
+                            <td class="marruecos">12</td>
+                            <td class="marruecos">13</td>
+                            <td class="marruecos">14</td>
+                            <td class="marruecos">15</td>
+                            <td class="marruecos">16</td>
+                        </tr>
+                        <tr>
+                            <td class="marruecos">17</td>
+                            <td class="marruecos">18</td>
+                            <td class="marruecos">19</td>
+                            <td>20</td>
+                            <td class="silencio">21</td>
+                            <td class="silencio">22</td>
+                            <td class="silencio">23</td>
+                        </tr>
+                        <tr>
+                            <td>24</td>
+                            <td>25</td>
+                            <td>26</td>
+                            <td>27</td>
+                            <td>28</td>
+                            <td>29</td>
+                            <td>30</td>
+                        </tr>
+                        <tr>
+                            <td>31</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="legend">
+                <h3>Leyenda</h3>
+                <ul>
+                    <li><span class="legend-color silencio"></span> Ruta del Silencio</li>
+                    <li><span class="legend-color plata"></span> Ruta de la Plata</li>
+                    <li><span class="legend-color marruecos"></span> Ruta de Marruecos</li>
+                    <li><span class="legend-color flor"></span> Ruta de la Flor</li>
+                </ul>
+            </div>
+        </section>
+	</main>
+	<footer>
+		<p>&copy; 2025 Web DESUBICA2</p>
+	</footer>
+</body>
+</html>
